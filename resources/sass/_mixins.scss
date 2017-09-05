@@ -1,0 +1,22 @@
+@mixin box-sizing($val) {
+  -webkit-box-sizing: $val;
+  -moz-box-sizing: $val;
+  box-sizing: $val;
+}
+
+@mixin border-radius($val1,$val2,$val3,$val4) {
+  -webkit-border-radius: $val1 $val2 $val3 $val4;
+  -moz-border-radius: $val1 $val2 $val3 $val4;
+  border-radius: $val1 $val2 $val3 $val4;
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
