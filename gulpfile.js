@@ -1,8 +1,8 @@
 // include necassary gulp plugins for the project
 var gulp = 				require('gulp'),
 	concat = 			require('gulp-concat'),
-	imagemin =				require('gulp-imagemin'),
-  pngquant =          require('imagemin-pngquant'),
+	//imagemin =				require('gulp-imagemin'),
+  //pngquant =          require('imagemin-pngquant'),
 	sass =				require('gulp-sass'),
 	minifyCSS =			require('gulp-minify-css'),
 	plumber = 			require('gulp-plumber'),
@@ -10,8 +10,6 @@ var gulp = 				require('gulp'),
 	uglify = 			require('gulp-uglify'),
 	//iconfont =        require('gulp-iconfont'),
 	livereload =        require('gulp-livereload'),
-  minifyHTML =        require('gulp-minify-html'),
-  fileinclude = require('gulp-file-include'),
   runTimestamp = Math.round(Date.now()/1000);
 
 // error handling
@@ -45,7 +43,7 @@ gulp.task('styles', function () {
 	.pipe(gulp.dest(bases.live + paths.css));
 });
 
-gulp.task('image', function () {
+/*gulp.task('image', function () {
     return gulp.src('./resources/img/*')
         .pipe(imagemin({
             progressive: true,
@@ -53,7 +51,7 @@ gulp.task('image', function () {
             use: [pngquant()]
         }))
         .pipe(gulp.dest(bases.live + paths.img));
-});
+});*/
 
 gulp.task('js', function() {
 	gulp.src("resources/js/*.js")
@@ -81,7 +79,7 @@ gulp.task('js', function() {
 */
 
 gulp.task('watch', function() {
-	gulp.watch(bases.dev + paths.img + '**/*', ['image']);
+	//gulp.watch(bases.dev + paths.img + '**/*', ['image']);
 	gulp.watch(bases.dev + paths.sass + '**/*.scss', ['styles']);
 	gulp.watch(bases.dev + paths.js + '**/*.js', ['js']);
     //gulp.watch(bases.dev + 'icons/*.svg', ['iconFont']);

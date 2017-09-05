@@ -1,0 +1,33 @@
+{
+  "name": "kovtunets",
+  "version": "1.0.0",
+  "description": "cv project",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elen-ko/kovtunets.git"
+  },
+  "author": "Elen-ko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elen-ko/kovtunets/issues"
+  },
+  "homepage": "https://github.com/Elen-ko/kovtunets#readme"
+}
