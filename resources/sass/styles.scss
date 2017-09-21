@@ -1,7 +1,13 @@
 //font
-@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,400italic,300italic';
+@import 'https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,600,600i,700,700i';
 
-// variables
-@import "variables";
-@import "mixins";
+
+// libs
+@import "libs/variables";
+@import 'libs/functions';
+@import 'libs/mixins';
+
+@import "fonts";
 @import "general";
+@import "intro";
+@import "nav";

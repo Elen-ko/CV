@@ -1,8 +1,7 @@
 // include necassary gulp plugins for the project
 var gulp = 				require('gulp'),
 	concat = 			require('gulp-concat'),
-	//imagemin =				require('gulp-imagemin'),
-  //pngquant =          require('imagemin-pngquant'),
+	imageop = require('gulp-image-optimization'),
 	sass =				require('gulp-sass'),
 	minifyCSS =			require('gulp-minify-css'),
 	plumber = 			require('gulp-plumber'),
@@ -43,15 +42,13 @@ gulp.task('styles', function () {
 	.pipe(gulp.dest(bases.live + paths.css));
 });
 
-/*gulp.task('image', function () {
-    return gulp.src('./resources/img/*')
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
-        }))
-        .pipe(gulp.dest(bases.live + paths.img));
-});*/
+gulp.task('images', function(cb) {
+    gulp.src(['resources/img/*.png','resources/img/*.jpg','resources/img/*.gif','resources/img/*.jpeg']).pipe(imageop({
+        optimizationLevel: 5,
+        progressive: true,
+        interlaced: true
+    })).pipe(gulp.dest(bases.live + paths.img)).on('end', cb).on('error', cb);
+});
 
 gulp.task('js', function() {
 	gulp.src("resources/js/*.js")
@@ -79,9 +76,9 @@ gulp.task('js', function() {
 */
 
 gulp.task('watch', function() {
-	//gulp.watch(bases.dev + paths.img + '**/*', ['image']);
+	gulp.watch(bases.dev + paths.img + '**/*', ['images']);
 	gulp.watch(bases.dev + paths.sass + '**/*.scss', ['styles']);
-	gulp.watch(bases.dev + paths.js + '**/*.js', ['js']);
+	//gulp.watch(bases.dev + paths.js + '**/*.js', ['js']);
     //gulp.watch(bases.dev + 'icons/*.svg', ['iconFont']);
 
     livereload.listen();
@@ -89,4 +86,4 @@ gulp.task('watch', function() {
 
 });
 
-gulp.task('default', [ 'js', 'styles',  'watch']);
+gulp.task('default', [ 'js', 'styles', 'watch']);
