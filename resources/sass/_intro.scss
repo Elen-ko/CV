@@ -1,4 +1,52 @@
 /* Intro section */
 #intro {
+  grid-area: intro;
+  display: grid;
+  grid-column-gap: 10%;
+  grid-template-columns: 45% 45%;
+  grid-template-rows: 4rem auto 3rem 1fr;
+
   color: #fff;
+}
+
+// avatar
+.avatar {
+  grid-row: 2;
+  grid-column: 1 / 2;
+  justify-self: end;
+
+  background-image: url(#{$image-path}avatar.png);
+  border: 10px solid _palette(main-yellow);
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.description {
+  grid-row: 2;
+  grid-column: 2 / 3;
+  align-self: center;
+
+  text-transform: uppercase;
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  hr {
+    width: 50%;
+    margin: 20px auto;
+  }
+
+}
+
+.actions {
+  grid-row: 4;
+  grid-column: 1 / 3;
 }

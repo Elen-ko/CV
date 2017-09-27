@@ -16,11 +16,13 @@ html {
 
 body {
   background: _palette(main-blue);
+  margin: 0;
+  min-width: 320px;
 }
 
-body::after {
+body:after {
   content: "";
-  background: url(../img/bg.jpg) no-repeat center center fixed;
+  background: url(#{$image-path}bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -39,6 +41,23 @@ body, input, select, textarea {
   font-weight: _font(weight);
   font-size: 1rem;
   line-height: 2.375;
+}
+
+// wrapper
+#wrapper {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  justify-items: center;
+  grid-template-areas: "navigation"
+  "intro"
+  "proficiency"
+  "job"
+  "education"
+  "languages"
+  "hobby"
+  "contact"
+  "footer";
 }
 
 #wrapper.fade-in::before {
@@ -70,7 +89,7 @@ h6{
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 h2 {
