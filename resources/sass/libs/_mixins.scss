@@ -4,10 +4,16 @@
   box-sizing: $val;
 }
 
-@mixin border-radius($val1,$val2,$val3,$val4) {
-  -webkit-border-radius: $val1 $val2 $val3 $val4;
-  -moz-border-radius: $val1 $val2 $val3 $val4;
-  border-radius: $val1 $val2 $val3 $val4;
+@mixin background-size($val) {
+  -webkit-background-size: $val;
+  -moz-background-size: $val;
+  background-size: $val;
+}
+
+@mixin border-radius($val) {
+  -webkit-border-radius: $val;
+  -moz-border-radius: $val;
+  border-radius: $val;
 }
 
 @mixin clearfix() {

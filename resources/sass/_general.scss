@@ -58,10 +58,12 @@ body, input, select, textarea {
   "hobby"
   "contact"
   "footer";
-}
 
-#wrapper.fade-in::before {
-  background: _palette(main-blue);
+  .item {
+    width: 100%;
+    padding: 4rem 1rem;
+    @include box-sizing(border-box);
+  }
 }
 
 a{
@@ -111,6 +113,13 @@ h5 {
 
 h6 {
   font-size: 0.8rem;
+}
+
+.heading {
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  text-align: center;
+  margin: 0 auto 3rem;
 }
 
 /* List */

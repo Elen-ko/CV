@@ -4,32 +4,35 @@
   display: grid;
   grid-column-gap: 10%;
   grid-template-columns: 45% 45%;
-  grid-template-rows: 4rem auto 3rem 1fr;
+  grid-template-rows: auto 3rem 1fr;
 
   color: #fff;
 }
 
 // avatar
 .avatar {
-  grid-row: 2;
+  grid-row: 1;
   grid-column: 1 / 2;
   justify-self: end;
 
   background-image: url(#{$image-path}avatar.png);
   border: 10px solid _palette(main-yellow);
-  border-radius: 50%;
+  @include border-radius(50%);
   width: 250px;
   height: 250px;
-  background-size: cover;
+  @include background-size(cover);
   background-position: center;
 }
 
 .description {
-  grid-row: 2;
+  grid-row: 1;
   grid-column: 2 / 3;
   align-self: center;
+  justify-self: left;
 
   text-transform: uppercase;
+  letter-spacing: 1.1px;
+  text-align: center;
 
   h1 {
     font-size: 1.3rem;
@@ -47,6 +50,6 @@
 }
 
 .actions {
-  grid-row: 4;
+  grid-row: 3;
   grid-column: 1 / 3;
 }
