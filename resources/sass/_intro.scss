@@ -7,49 +7,93 @@
   grid-template-rows: auto 3rem 1fr;
 
   color: #fff;
-}
 
-// avatar
-.avatar {
-  grid-row: 1;
-  grid-column: 1 / 2;
-  justify-self: end;
-
-  background-image: url(#{$image-path}avatar.png);
-  border: 10px solid _palette(main-yellow);
-  @include border-radius(50%);
-  width: 250px;
-  height: 250px;
-  @include background-size(cover);
-  background-position: center;
-}
-
-.description {
-  grid-row: 1;
-  grid-column: 2 / 3;
-  align-self: center;
-  justify-self: left;
-
-  text-transform: uppercase;
-  letter-spacing: 1.1px;
-  text-align: center;
-
-  h1 {
-    font-size: 1.3rem;
+  a {
+    color: #fff;
   }
 
-  h2 {
-    font-size: 1.5rem;
+  @include media-breakpoint-down(xs) {
+    grid-template-columns: 100%;
+    grid-template-rows: auto 3rem auto 3rem 1fr;
   }
 
-  hr {
-    width: 50%;
-    margin: 20px auto;
+  // avatar
+  .avatar {
+    grid-row: 1;
+    grid-column: 1 / 2;
+    justify-self: end;
+
+    background-image: url(#{$image-path}avatar.png);
+    border: 10px solid _palette(main-yellow);
+    @include border-radius(50%);
+    width: 250px;
+    height: 250px;
+    @include background-size(cover);
+    background-position: center;
+
+    @include media-breakpoint-down(sm) {
+      width: 200px;
+      height: 200px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      grid-column: 1;
+      grid-row: 3;
+      justify-self: center;
+    }
   }
 
-}
+  .description {
+    grid-row: 1;
+    grid-column: 2 / 3;
+    align-self: center;
+    justify-self: left;
 
-.actions {
-  grid-row: 3;
-  grid-column: 1 / 3;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    text-align: center;
+
+    h1 {
+      font-size: 1.3rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    hr {
+      width: 50%;
+      margin: 20px auto;
+    }
+
+    @include media-breakpoint-down(xs) {
+      grid-column: 1;
+      grid-row: 1;
+      justify-self: center;
+    }
+  }
+
+  .button {
+    grid-row: 3;
+    grid-column: 1 / 3;
+    justify-self: center;
+
+    max-width: 200px;
+    padding: 3px 20px 2px;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    @include transition(all .5s ease);
+
+    &:hover {
+      background: #fff;
+      color: _palette(main-blue);
+      text-decoration: none;
+      border-color: _palette(main-blue);
+    }
+
+    @include media-breakpoint-down(xs) {
+      grid-column: 1;
+      grid-row: 5;
+    }
+  }
 }
