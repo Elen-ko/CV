@@ -23,6 +23,11 @@ $(function(){
             $(document).on("scroll", onScroll);
         });
     });
+
+    // collapsed menu on small devices
+    $('#nav .bar').on('click', function(){
+        $('#nav').toggleClass('openned');
+    });
 });
 
 function onScroll(event){
@@ -30,7 +35,7 @@ function onScroll(event){
     var menu =   $('#nav .menu');
     var links = menu.find('a');
     var topPosition;
-    var topSpace = 70;
+    var topSpace = menu.height() + 30;
 
     (scrollPos > topSpace) ? menu.addClass('fixed') : menu.removeClass('fixed');
 
