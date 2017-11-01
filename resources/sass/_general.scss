@@ -64,6 +64,18 @@ body, input, select, textarea {
     padding: 4rem 1rem;
     @include box-sizing(border-box);
   }
+
+  @include media-breakpoint-down(sm) {
+    grid-template-areas:
+    "intro"
+    "proficiency"
+    "job"
+    "education"
+    "languages"
+    "hobby"
+    "contact"
+    "footer";
+  }
 }
 
 a{
