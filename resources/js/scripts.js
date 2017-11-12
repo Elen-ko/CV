@@ -39,6 +39,8 @@ function onScroll(event){
 
     (scrollPos > topSpace) ? menu.addClass('fixed') : menu.removeClass('fixed');
 
+    activateProgressCircles(scrollPos);
+
     links.each(function () {
         var currLink = $(this);
         var refElement = currLink.attr("href");
@@ -55,4 +57,17 @@ function onScroll(event){
           }
         }
     });
-}
+};
+
+function activateProgressCircles(pos) {
+  var progressObj = $('.progress-circles');
+  var progressObjTop = progressObj.position().top;
+  var parentTop = progressObj.parent().position().top;
+  var diff = progressObjTop - parentTop + 50;
+
+  if (progressObjTop <= pos + diff) {
+    if (!progressObj.hasClass('activated')) {
+      progressObj.addClass('activated');
+    }
+  }
+};
