@@ -105,7 +105,7 @@ $value: 100px;
 		right: 0;
 		top: 0;
 		position: fixed;
-		background: _palette(main-yellow);
+		background: rgba(_palette(main-yellow),0.93);
 		text-align: left;
 		overflow: hidden;
 		@include border-radius(50%);
@@ -149,6 +149,7 @@ $value: 100px;
 
 			li {
 				display: block;
+				letter-spacing: 1px;
 			}
 		}
 

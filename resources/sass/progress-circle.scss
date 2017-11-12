@@ -3,11 +3,6 @@ $color-progress-circle: transparent;
 $color-progress-idicator: _palette(main-blue);
 $color-progress-number: #fff;
 
-h1{
-  color: #63B8FF;
-  text-align: center;
-}
-
 .progress-circles {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
