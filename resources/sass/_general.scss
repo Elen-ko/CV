@@ -22,7 +22,7 @@ body {
 
 body:after {
   content: "";
-  background: url(#{$image-path}bg.jpg) no-repeat center center fixed;
+  //background: url(#{$image-path}bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -40,7 +40,7 @@ body, input, select, textarea {
   font-family: _font(family);
   font-weight: _font(weight);
   font-size: 1rem;
-  line-height: 2.375;
+  line-height: 1.2;
 }
 
 // wrapper
@@ -132,6 +132,10 @@ h6 {
   letter-spacing: 1.1px;
   text-align: center;
   margin: 0 auto 3rem;
+}
+
+p {
+  margin: 0 0 1rem;
 }
 
 /* List */

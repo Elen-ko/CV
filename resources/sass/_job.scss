@@ -1,0 +1,117 @@
+/* job history section */
+#job {
+  grid-area: job;
+
+  background: _palette(main-blue);
+  color: $white;
+  position: relative;
+  padding-bottom: 10rem !important;
+
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  &:before {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    content: "";
+    width: 3px;
+    background: $white;
+    z-index: 3;
+  }
+
+  .heading {
+    background: _palette(main-blue);
+    padding: 8px 0 2px;
+    z-index: 6;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-column-gap: 10%;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: auto;
+    z-index: 5;
+
+    .box {
+      grid-column: 1 / 2;
+      justify-self: right;
+
+      text-align: right;
+      max-width: 400px;
+
+      h4 {
+        font-size: 2rem;
+        letter-spacing: 4px;
+        margin: 0 0 1.5rem;
+
+        &:after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          margin: 2px 0 0 -8px;
+          width: 13px;
+          height: 13px;
+          border: 3px solid $white;
+          @include border-radius(50%);
+          background: _palette(main-blue);
+        }
+
+        &.medium:after {
+          margin-left: -13px;
+          width: 23px;
+          height: 23px;
+        }
+
+        &.big:after {
+          margin-left: -18px;
+          width: 33px;
+          height: 33px;
+        }
+      }
+    }
+
+    &:nth-child(2n + 1) .box {
+      grid-column: 2 / 2;
+      justify-self: left;
+
+      text-align: left;
+    }
+
+    &:last-child {
+      h4:after {
+        background: $white;
+      }
+    }
+  }
+
+  .city-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    overflow: hidden;
+    background: url(#{$image-path}city-dark-silhouette.png);
+    @include background-size (auto 100%);
+
+    &:before {
+      height: 85%;
+      content: "";
+      left: -15px;
+      right: -15px;
+      position: absolute;
+      bottom: 0;
+      background: url(#{$image-path}city-white-silhouette.png);
+      @include background-size (auto 100%);
+    }
+
+    @include media-breakpoint-down(sm) {
+      height: 150px;
+    }
+  }
+
+}

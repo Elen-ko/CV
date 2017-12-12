@@ -10,13 +10,16 @@ $image-path: '../img/';
 		weight-heading:		700
 	);
 
+// simple colors
+$white: #fff;
+
 // Palette
 	$palette: (
 		main-blue: #0b6ab8,
-		dark-blue: #003e8a,
+		dark-blue: #003D6D,
 		main-yellow: #ffc929,
 		wrapper-bg:			#212931,
-		bg:					#ffffff
+		bg:					$white
 	);
 
 	// Grid breakpoints

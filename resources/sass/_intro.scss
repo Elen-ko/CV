@@ -6,10 +6,10 @@
   grid-template-columns: 45% 45%;
   grid-template-rows: auto 3rem 1fr;
 
-  color: #fff;
+  color: $white;
 
   a {
-    color: #fff;
+    color: $white;
   }
 
   @include media-breakpoint-down(xs) {
@@ -79,13 +79,13 @@
     justify-self: center;
 
     max-width: 200px;
-    padding: 3px 20px 2px;
+    padding: 1rem 1.5rem;
     text-transform: uppercase;
-    border: 2px solid #fff;
+    border: 2px solid $white;
     @include transition(all .5s ease);
 
     &:hover {
-      background: #fff;
+      background: $white;
       color: _palette(main-blue);
       text-decoration: none;
       border-color: _palette(main-blue);
