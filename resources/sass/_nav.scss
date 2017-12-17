@@ -31,7 +31,7 @@ $value: 100px;
 			@include transition(background .5s ease);
 
 			&.fixed {
-				background: rgba(0, 0, 0, 0.35);
+				background: rgba(_palette(dark-blue), 0.75);
 			}
 
 			li {
@@ -47,7 +47,7 @@ $value: 100px;
 				}
 
 				&:hover, &.active {
-					color: #000;
+					color: _palette(main-yellow);
 				}
 			}
 		}
@@ -150,6 +150,11 @@ $value: 100px;
 			li {
 				display: block;
 				letter-spacing: 1px;
+				padding: 5px 0;
+
+				a {
+					display: inline;
+				}
 			}
 		}
 

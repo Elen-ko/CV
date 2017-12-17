@@ -5,7 +5,7 @@
   background: _palette(main-blue);
   color: $white;
   position: relative;
-  padding-bottom: 10rem !important;
+  padding-bottom: 15rem !important;
 
   & > * {
     position: relative;
@@ -81,7 +81,7 @@
       text-align: left;
     }
 
-    &:last-child {
+    &:last-of-type {
       h4:after {
         background: $white;
       }
