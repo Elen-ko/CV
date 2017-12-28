@@ -1,0 +1,20 @@
+/* Languages section */
+#languages {
+  grid-area: languages;
+
+  color: $white;
+
+  .progress-circle{
+    &.progress-100:before {
+      content: "native";
+    }
+
+    &.progress-85:before {
+      content: "advanced";
+    }
+
+    &.progress-70:before {
+      content: "basic";
+    }
+  }
+}

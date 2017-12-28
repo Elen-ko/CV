@@ -1,5 +1,8 @@
+// an icon of climbing men by Alec Dhuse was used
+// Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+
 $font-path:  "../fonts/";
-$font-prefix: "ub8qjx";
+$font-prefix: "byjavx";
 
 @font-face {
   font-family: 'custom_iconfont';
@@ -26,15 +29,33 @@ $font-prefix: "ub8qjx";
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-travelling:before {
+  content: "\e907";
+}
+.icon-climbing:before {
+  content: "\e906";
+}
+.icon-study:before {
+  content: "\e905";
+}
 .icon-facebook:before {
   content: "\e900";
 }
 .icon-instagram:before {
   content: "\e901";
 }
+.icon-mail:before {
+  content: "\e903";
+}
+.icon-phone:before {
+  content: "\e904";
+}
 .icon-twitter:before {
   content: "\e902";
 }
 .icon-github:before {
   content: "\eab0";
+}
+.icon-skype:before {
+  content: "\eac5";
 }

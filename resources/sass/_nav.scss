@@ -15,7 +15,7 @@ $value: 100px;
 		}
 
 		a {
-			color: #fff;
+			color: $white;
 			@include transition(color .5s ease);
 
 			&:hover {
@@ -68,7 +68,7 @@ $value: 100px;
 				}
 
 				&:after {
-					border: 1px solid #fff;
+					border: 1px solid $white;
 					content: '';
 					position: absolute;
 					z-index: -1;

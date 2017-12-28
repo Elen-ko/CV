@@ -11,17 +11,29 @@
     grid-template-columns: 100%;
   }
 
-  .heading {
-    grid-column: 1 / span 2;
+  @include media-breakpoint-up(sm) {
+    .heading {
+      grid-column: 1 / span 2;
+    }
   }
 
   .box {
-    width: 310px;
-    text-align: center;
     justify-self: right;
+
+    max-width: 310px;
+    text-align: center;
 
     &:nth-child(2n+1) {
       justify-self: left;
+    }
+
+    @include media-breakpoint-down(xs) {
+      justify-self: center !important;
+      margin-bottom: 40px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
 
     header {
@@ -29,6 +41,10 @@
       margin: 0 auto 35px;
       background: _palette(main-blue);
       color: $white;
+
+      @include media-breakpoint-down(xs) {
+          margin-bottom: 20px;
+      }
 
       span {
         padding:10px 5px;
@@ -62,6 +78,4 @@
       }
     }
   }
-
-
 }
