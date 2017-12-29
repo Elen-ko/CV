@@ -63,7 +63,7 @@ function activateProgressCircles(pos) {
   var progressObj = $('.progress-circles');
   var progressObjTop = progressObj.position().top;
   var parentTop = progressObj.parent().position().top;
-  var diff = progressObjTop - parentTop + 50;
+  var diff = progressObjTop - parentTop + 100;
 
   if (progressObjTop <= pos + diff) {
     if (!progressObj.hasClass('activated')) {

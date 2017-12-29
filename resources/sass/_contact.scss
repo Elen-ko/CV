@@ -1,0 +1,40 @@
+/* Contact section */
+#contact {
+  grid-area: contact;
+
+  background: $white;
+
+  ul {
+    text-align: center;
+
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      width: 32%;
+
+      @include media-breakpoint-down(xs) {
+        display: block;
+        width: auto;
+        text-align: left;
+        padding: 0 0 15px;
+        font-size: 1.2rem;
+      }
+    }
+
+    [class^="icon-"], [class*=" icon-"] {
+      display: block;
+      font-size: 1.6rem;
+      margin: 0 0 15px;
+
+      @include media-breakpoint-down(xs) {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 15px 0 0;
+      }
+    }
+
+    a {
+      color: #000;
+    }
+  }
+}

@@ -189,6 +189,10 @@ $value: 100px;
 			span.bar:after{
 				@include transform (rotate(-45deg) translateY(-10px) translateX(10px));
 			}
+
+			ul.menu a.active {
+				color: #000;
+			}
 		}
 	}
 
