@@ -120,3 +120,10 @@
   -webkit-transform: $args;
   transform: $args;
 }
+
+// box shadow
+@mixin box-shadow($val) {
+  -webkit-box-shadow:$val;
+  -moz-box-shadow:$val;
+  box-shadow:$val;
+}
