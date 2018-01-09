@@ -51,11 +51,14 @@
       color: $white;
       opacity: 0;
       @include transition(opacity .7s ease);
+      display: table;
 
        p {
         position: relative;
         z-index: 2;
         margin: 0;
+        display: table-cell;
+        vertical-align: middle;
       }
 
       &:after {

@@ -10,7 +10,7 @@ html {
   }
 
   @include media-breakpoint-down(xs){
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -22,7 +22,7 @@ body {
 
 body:after {
   content: "";
-  background: url(#{$image-path}bg.jpg) no-repeat center center fixed;
+  //background: url(#{$image-path}bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

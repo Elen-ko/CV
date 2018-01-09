@@ -42,11 +42,20 @@
 
       text-align: right;
       max-width: 400px;
+      font-size: 1.2rem;
+
+      a {
+        color: $white;
+        text-decoration: underline;
+      }
 
       h4 {
-        font-size: 2rem;
-        letter-spacing: 4px;
+        font-size: 1.4rem;
         margin: 0 0 1.5rem;
+
+        span {
+          font-size: 2rem;
+        }
 
         &:after {
           content: "";
@@ -81,7 +90,7 @@
       text-align: left;
     }
 
-    &:last-of-type {
+    &:first-of-type {
       h4:after {
         background: $white;
       }

@@ -127,3 +127,16 @@
   -moz-box-shadow:$val;
   box-shadow:$val;
 }
+
+// display flex
+@mixin display-flex($val) {
+  display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+  -ms-flex-align: $val;
+	-webkit-align-items: $val;
+	-webkit-box-align: $val;
+
+	align-items: $val;
+}
