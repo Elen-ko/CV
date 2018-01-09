@@ -58,6 +58,11 @@ gulp.task('js', function() {
     	.pipe(gulp.dest(bases.live + paths.js));
 });
 
+gulp.task('html', function() {
+	gulp.src("resources/*.html")
+    	.pipe(gulp.dest(bases.live));
+});
+
 
 /*gulp.task('iconFont', function(){
   gulp.src('./resources/icons/*.svg')
@@ -86,4 +91,4 @@ gulp.task('watch', function() {
 
 });
 
-gulp.task('default', [ 'js', 'styles', 'watch']);
+gulp.task('default', [ 'html', 'js', 'styles', 'watch']);
