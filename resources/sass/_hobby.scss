@@ -52,6 +52,7 @@
       opacity: 0;
       @include transition(opacity .7s ease);
       display: table;
+      font: 1.1rem/1.4 Arial, sans-serif;
 
        p {
         position: relative;

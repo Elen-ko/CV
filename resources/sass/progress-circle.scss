@@ -20,6 +20,7 @@ $color-progress-number: $white;
 
   position: relative;
   @include border-radius(50%);
+  border: 1px solid #444;
 
   span {
     position: absolute;
@@ -28,7 +29,6 @@ $color-progress-number: $white;
     width: 100%;
     z-index: 1;
     text-transform: uppercase;
-    opacity: 0;
   }
 
   &:before {
@@ -77,7 +77,7 @@ $color-progress-number: $white;
     animation: colorload 2s;
   }
 
-  span, &:before {
+  &:before {
     opacity: 1;
   }
 }
