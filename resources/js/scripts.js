@@ -34,6 +34,7 @@ function onScroll(event){
     var scrollPos = $(document).scrollTop();
     var menu =   $('#nav .menu');
     var links = menu.find('a');
+    var lastLink = menu.find('li:last-child a');
     var topPosition;
     var topSpace = menu.height() + 30;
 
@@ -48,7 +49,7 @@ function onScroll(event){
         if ( $(refElement).length > 0){
           topPosition = $(refElement).position().top;
 
-          if ( topPosition <= scrollPos + topSpace && topPosition + $(refElement).height() > scrollPos) {
+          if ( topPosition <= scrollPos + topSpace ) {
               links.removeClass("active");
               currLink.addClass("active");
           }
@@ -57,6 +58,11 @@ function onScroll(event){
           }
         }
     });
+    // activate the last link when hit the bottom of a page
+    if($(window).scrollTop() == $(document).height() - $(window).height()) {
+           links.removeClass("active");
+           lastLink.addClass("active");
+    }
 };
 
 function activateProgressCircles(pos) {
