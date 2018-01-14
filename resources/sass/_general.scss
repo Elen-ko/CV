@@ -68,6 +68,7 @@ body, input, select, textarea {
     width: 100%;
     padding: 5rem 1rem;
     @include box-sizing(border-box);
+    overflow: hidden;
   }
 
   @include media-breakpoint-down(sm) {
