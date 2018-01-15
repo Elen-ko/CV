@@ -67,13 +67,19 @@ function onScroll(event){
 
 function activateProgressCircles(pos) {
   var progressObj = $('.progress-circles');
-  var progressObjTop = progressObj.position().top;
-  var parentTop = progressObj.parent().position().top;
-  var diff = progressObjTop - parentTop + 100;
+  var _this, progressObjTop, parentTop, diff;
 
-  if (progressObjTop <= pos + diff) {
-    if (!progressObj.hasClass('activated')) {
-      progressObj.addClass('activated');
+  progressObj.each(function(){
+    _this = $(this);
+    progressObjTop = _this.position().top;
+    parentTop = _this.parent().position().top;
+    diff = progressObjTop - parentTop + 100;
+
+    if (progressObjTop <= pos + diff) {
+      if (!_this.hasClass('activated')) {
+        _this.addClass('activated');
+      }
     }
-  }
+  });
+
 };
