@@ -1,5 +1,6 @@
 $(function(){
   //var s = skrollr.init();
+  var nav = $('#nav');
 
   $(document).on("scroll", onScroll);
 
@@ -25,9 +26,17 @@ $(function(){
     });
 
     // collapsed menu on small devices
-    $('#nav ~ .bar').on('click', function(){
-        $('#nav').toggleClass('openned');
+    $(document).on('click', function(e) {
+      if (e.target.className === "bar") {
+        nav.toggleClass('openned');
+      } else {
+        // if the target of the click isn't the navbar nor a descendant of the navbar
+        if (!nav.is(e.target) && nav.has(e.target).length === 0){
+          nav.removeClass('openned');
+        }
+      }
     });
+
 });
 
 function onScroll(event){

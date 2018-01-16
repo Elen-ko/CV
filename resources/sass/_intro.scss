@@ -23,7 +23,7 @@
     grid-column: 1 / 2;
     justify-self: end;
 
-    background-image: url(#{$image-path}avatar.png);
+    background-image: url(#{$image-path}avatar.jpg);
     border: 10px solid _palette(main-yellow);
     @include border-radius(50%);
     width: 250px;
