@@ -25,7 +25,7 @@ $(function(){
     });
 
     // collapsed menu on small devices
-    $('#nav .bar').on('click', function(){
+    $('#nav ~ .bar').on('click', function(){
         $('#nav').toggleClass('openned');
     });
 });

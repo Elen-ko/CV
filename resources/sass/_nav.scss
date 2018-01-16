@@ -113,36 +113,6 @@ $value: 100px;
 		@include border-radius(50%);
 		box-shadow: 0 0 15px -5px #000;
 
-		span.bar {
-			position: fixed;
-			right: 15px;
-			top: 15px;
-			height: 40px;
-			width: 40px;
-			z-index: 10;
-
-			em,
-			&:after,
-			&:before {
-					height: 4px;
-					width: 40px;
-					@include border-radius(40px);
-					background: #fff;
-					@include box-shadow (0px 0px 3px #000);
-					display: block;
-					@include transition(all 0.4s ease);
-			}
-
-			&:after,
-			&:before {
-				content: '';
-			}
-
-			em {
-				margin: 10px 0;
-			}
-		}
-
 		ul.menu {
 			background: none !important;
 			position: relative;
@@ -176,25 +146,26 @@ $value: 100px;
 			top: -$value;
 			right: -$value;
 
-			span.bar:before, span.bar:after{
-				z-index: 100;
-				@include transform (rotate(45deg));
-			}
+			& ~ span.bar {
+				&:before, &:after{
+					@include transform (rotate(45deg));
+				}
 
-			span.bar:before{
-				@include transform (rotate(45deg) translateY(10px) translateX(10px));
-			}
+				&:before{
+					@include transform (rotate(45deg) translateY(10px) translateX(10px));
+				}
 
-			span.bar > em{
-				opacity: 0;
+				& > em{
+					opacity: 0;
+				}
+
+				&:after{
+					@include transform (rotate(-45deg) translateY(-10px) translateX(10px));
+				}
 			}
 
 			li {
 				margin-right: 0;
-			}
-
-			span.bar:after{
-				@include transform (rotate(-45deg) translateY(-10px) translateX(10px));
 			}
 
 			ul.menu a.active {
@@ -202,5 +173,34 @@ $value: 100px;
 			}
 		}
 	}
+}
 
+span.bar {
+	position: fixed;
+	right: 15px;
+	top: 15px;
+	height: 40px;
+	width: 40px;
+	z-index: 105;
+
+	em,
+	&:after,
+	&:before {
+			height: 4px;
+			width: 40px;
+			@include border-radius(40px);
+			background: #fff;
+			@include box-shadow (0px 0px 3px #000);
+			display: block;
+			@include transition(all 0.4s ease);
+	}
+
+	&:after,
+	&:before {
+		content: '';
+	}
+
+	em {
+		margin: 10px 0;
+	}
 }
