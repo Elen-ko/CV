@@ -1,19 +1,16 @@
 /* Education section */
 #education {
   grid-area: education;
-  display: grid;
-  grid-column-gap: 10%;
-  grid-template-columns: 45% 45%;
 
   background: $white;
 
-  @include media-breakpoint-down(xs) {
-    grid-template-columns: 100%;
-  }
+  .wrapper {
+    display: grid;
+    grid-column-gap: 10%;
+    grid-template-columns: 45% 45%;
 
-  @include media-breakpoint-up(sm) {
-    .heading {
-      grid-column: 1 / span 2;
+    @include media-breakpoint-down(xs) {
+      grid-template-columns: 100%;
     }
   }
 

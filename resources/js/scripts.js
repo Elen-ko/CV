@@ -26,7 +26,7 @@ $(function(){
     });
 
     // collapsed menu on small devices
-    $(document).on('click', function(e) {
+    $(document).on('click touchstart', function(e) {
       if (e.target.className === "bar") {
         nav.toggleClass('openned');
       } else {
