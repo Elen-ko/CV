@@ -486,8 +486,8 @@ $color-progress-number: $white;
   background-image: linear-gradient(90deg, $color-progress-idicator 50%, transparent 50%, transparent), linear-gradient(270deg, $color-progress-idicator 50%, $color-progress-circle 50%, $color-progress-circle);
 }
 
-.progress-circle.progress-80:before {
-  content: "8/10";
+.progress-circle.progress-70:before {
+  content: "7/10";
 }
 
 .progress-circle.progress-75:before {
@@ -496,6 +496,18 @@ $color-progress-number: $white;
 
 .progress-circle.progress-70:before {
   content: "7/10";
+}
+
+.progress-circle.progress-80:before {
+  content: "8/10";
+}
+
+.progress-circle.progress-90:before {
+  content: "9/10";
+}
+
+.progress-circle.progress-95:before {
+  content: "9.5/10";
 }
 
 .progress-circle.progress-100:before {
